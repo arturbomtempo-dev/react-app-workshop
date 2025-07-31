@@ -1,4 +1,5 @@
 import { PiFire } from 'react-icons/pi';
+import { Link } from 'react-router-dom';
 
 export function Hero() {
     return (
@@ -12,15 +13,13 @@ export function Hero() {
                 <p className="max-w-lg text-base mt-4 md:text-xl">
                     Explore os filmes encantadores do Studio Ghibli e mergulhe em mundos mágicos.
                 </p>
-                <a
-                    href="/filmes"
-                    className="mt-8 inline-flex items-center gap-2 rounded-xl px-6 py-3
-                     bg-white text-surface backdrop-blur
-                     hover:bg-transparent hover:border hover:text-white transition"
+                <Link
+                    to="/filmes"
+                    className="mt-8 inline-flex items-center gap-2 rounded-lg px-6 py-3 bg-white text-surface backdrop-blur hover:bg-transparent hover:border hover:text-white transition"
                 >
                     <PiFire className="text-2xl" />
                     Descobrir filmes
-                </a>
+                </Link>
             </div>
         </section>
     );
