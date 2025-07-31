@@ -1,5 +1,6 @@
 // src/components/Header.tsx
 
+import { Link } from 'react-router-dom';
 import { useScrolled } from '../../../hooks/useScrolled';
 
 export function Header() {
@@ -17,7 +18,9 @@ export function Header() {
                     : 'bg-transparent border-transparent',
             ].join(' ')}
         >
-            <h1 className="font-roboto font-semibold text-2xl">DevMovie</h1>
+            <Link to="/" className="font-roboto font-semibold text-2xl">
+                DevMovie
+            </Link>
         </header>
     );
 }

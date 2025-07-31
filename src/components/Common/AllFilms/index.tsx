@@ -2,8 +2,7 @@ import axios from 'axios';
 import { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { api } from '../../../lib/axios';
-import { FilmCard } from '../../Common/FilmCard';
-import { Title } from '../Title';
+import { FilmCard } from './FilmCard';
 
 interface Film {
     id: string;
@@ -50,9 +49,8 @@ export function AllFilms({ limit }: AllFilmsProps) {
 
     return (
         <>
-            <Title text="Todos os Filmes" />
             {visibleFilms.length > 0 ? (
-                <div className="max-w-5xl mx-auto grid gap-6 text-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+                <section className="max-w-5xl mx-auto grid gap-6 text-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                     {visibleFilms.map((film) => (
                         <Link key={film.id} to={`/filmes/${film.id}`}>
                             <FilmCard
@@ -62,7 +60,7 @@ export function AllFilms({ limit }: AllFilmsProps) {
                             />
                         </Link>
                     ))}
-                </div>
+                </section>
             ) : (
                 <p className="text-center">Carregando filmes...</p>
             )}

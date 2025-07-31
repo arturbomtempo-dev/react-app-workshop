@@ -1,14 +1,12 @@
-import { Title } from '../Title';
-import { DirectorCard } from './DirectorCard';
+import goroMiyazaki from '@/assets/images/directors/goro-miyazaki.png';
 import hayaoMiyazaki from '@/assets/images/directors/hayao-miyazaki.png';
 import isaoTakahata from '@/assets/images/directors/isao-takahata.png';
 import yoshifumiKondo from '@/assets/images/directors/yoshifumi-kondo.png';
-import goroMiyazaki from '@/assets/images/directors/goro-miyazaki.png';
+import { DirectorCard } from './DirectorCard';
 
 export function Directors() {
     return (
         <>
-            <Title text="Diretores" />
             <p className="font-libre font-normal text-center mx-10 mb-8 text-sm">
                 Aqueles que tornaram reais os filmes que mudaram gerações.
             </p>
