@@ -30,7 +30,10 @@ export function AllFilms({ limit }: AllFilmsProps) {
                 setApiData(data);
             } catch (err) {
                 if (axios.isAxiosError(err)) {
-                    if (err.code === 'ERR_CANCELED') return;
+                    if (err.code === 'ERR_CANCELED') {
+                        return;
+                    }
+
                     console.error('Erro ao buscar dados:', err.response?.status, err.message);
                 } else {
                     console.error('Erro ao buscar dados:', err);
@@ -52,7 +55,7 @@ export function AllFilms({ limit }: AllFilmsProps) {
             {visibleFilms.length > 0 ? (
                 <section className="max-w-5xl mx-auto grid gap-6 text-center sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                     {visibleFilms.map((film) => (
-                        <Link key={film.id} to={`/filmes/${film.id}`}>
+                        <Link key={film.id} to={`/filme/${film.id}`}>
                             <FilmCard
                                 title={film.title}
                                 image={film.image || film.movie_banner}
