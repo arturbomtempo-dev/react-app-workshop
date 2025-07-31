@@ -1,6 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { Container } from '../../components/Common/Container';
 import { Header } from '../../components/Common/Header';
+import { Footer } from '../../components/Common/Footer';
 
 export function BasePage() {
     return (
@@ -9,6 +10,7 @@ export function BasePage() {
             <Container>
                 <Outlet />
             </Container>
+            <Footer />
         </main>
     );
 }
