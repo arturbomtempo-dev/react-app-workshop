@@ -10,6 +10,7 @@ export default {
             },
             colors: {
                 surface: '#121212',
+                divider: '#d9d9d9',
             },
         },
     },

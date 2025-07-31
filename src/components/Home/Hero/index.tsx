@@ -3,7 +3,7 @@ import { PiFire } from 'react-icons/pi';
 export function Hero() {
     return (
         <section className="h-screen relative isolate bg-[url('/home-image.png')] bg-cover bg-center bg-no-repeat flex items-center text-center md:text-left">
-            <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-black/100" />
+            <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-black/40 via-black/60 to-surface" />
 
             <div className="container relative w-full mx-auto px-10 py-24">
                 <h1 className="font-libre text-4xl leading-tight drop-shadow-sm md:text-6xl">
